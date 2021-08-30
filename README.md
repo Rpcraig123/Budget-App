@@ -1,13 +1,14 @@
 # Credit Card Expense Tracker
 ### Date Started: 08/30/21
 ### By: Ryan Craig
----
 
-<!-- ![SHOES](client/public/images/red.jpeg) -->
+[LinkedIn](https://www.linkedin.com/in/ryancraigeit/)
+
+![UI](./images/UI.PNG)
 
 >## *Description*
 
-Sole Mates is an social App specifically for shoes (think instagram but just shoe pics). Sole Mates can be used to show off your new kicks or discover new styles.
+This tracking app will be used to track expenses accumulated on a single credit card. The user will be able to add expenses and payments info while the app would calculate the total current amount of debt on the card in USD.
 
 ---
 >## *Technologies Used* 
@@ -21,19 +22,21 @@ Sole Mates is an social App specifically for shoes (think instagram but just sho
 
 >## *Entity Relationship Diagram*
 
-The database will take in user info as well as the info related to the shoes being posted. Database structure will be denormalized utilizing a one to many relationship connecting a single user to multiple posts. Entries will be connected by a generated objectId. 
+The database will be composed of 2 collections. One for payments and one for expenses. The collections will not be connected by any relationship. 
 
-<img src="client/public/images/ERD.PNG" width="725" style = "text-align:center"/>
+![ERD](./images/ERD.PNG)
 
 ---
 >## *Component Hierarchy Diagram*
 
-![Component Hierarchy Diagram](client/public/images/comp.png)
+![Component Hierarchy Diagram](./images/Comp_Diagram.PNG)
 
 >## *Task List*
 
 - [ ] Design frontend with React.
-- [ ] Build routes and controllers using Express. User should be able to perform CRUD operations.
-- [ ] Develope a demo database that allows users to post additional entries.
-- [ ] Style application into a presentable portfolio piece.
-- [ ] Deploy using Heroku.
+- [ ] Build Mongoose Models for both payments and expenses.
+- [ ] Use react router to build links for the windows that the user will use to add payments and expenses.
+- [ ] Put together seed data for testing.
+- [ ] Build routes and controllers using Express. User will be able to GET all present expenses and payments, POST a new payment or expense, and DELETE a payment or expense.
+- [ ] Deploy the app using Heroku to test functionality.
+- [ ] Style application into a presentable portfolio piece and implement post MVP requirements.
