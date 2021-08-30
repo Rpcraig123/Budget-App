@@ -2,10 +2,14 @@ const { Router } = require('express')
 const controllers = require('../controllers')
 const router = Router()
 
-router.get('/', controllers.getAllNewsfeed)
+router.get('/', controllers.getAllTransactions)
 
-// router.get('/shoes/:brand', controllers.getShoe)
+// router.post('/new-expense', controllers.createExpense)
 
-// router.post('/new-post', controllers.createShoe)
+// router.post('/new-payment', controllers.createPayment)
+
+// router.delete('/remove-transaction', controllers.removeTransaction)
+
+// router.update('/update-transaction', controllers.updateTransaction)
 
 module.exports = router
