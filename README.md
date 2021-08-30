@@ -9,13 +9,12 @@
 ---
 
 >## *Description*
-
 This tracking app will be used to track expenses accumulated on a single credit card. The user will be able to add expenses and payments info while the app would calculate the total current amount of debt on the card in USD.
 
 ---
->## *Technologies Used* 
 
-* Mongodb
+>## *Technologies Used* 
+* MongoDB
 * Express.js
 * React.js
 * Node.js
@@ -23,12 +22,12 @@ This tracking app will be used to track expenses accumulated on a single credit 
 ---
 
 >## *Entity Relationship Diagram*
-
 The database will be composed of 2 collections. One for payments and one for expenses. The collections will not be connected by any relationship. 
 
 ![ERD](./images/ERD.PNG)
 
 ---
+
 >## *Component Hierarchy Diagram*
 
 ![Component Hierarchy Diagram](./images/Comp_Diagram.PNG)
