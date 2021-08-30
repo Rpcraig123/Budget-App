@@ -4,7 +4,7 @@
 
 [LinkedIn](https://www.linkedin.com/in/ryancraigeit/)
 
-![UI](./images/UI.PNG)
+![UI](./images/UI_New.PNG)
 
 >## *Description*
 
