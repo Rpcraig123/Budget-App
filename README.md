@@ -6,6 +6,8 @@
 
 ![UI](./images/UI_New.PNG)
 
+---
+
 >## *Description*
 
 This tracking app will be used to track expenses accumulated on a single credit card. The user will be able to add expenses and payments info while the app would calculate the total current amount of debt on the card in USD.
@@ -30,6 +32,8 @@ The database will be composed of 2 collections. One for payments and one for exp
 >## *Component Hierarchy Diagram*
 
 ![Component Hierarchy Diagram](./images/Comp_Diagram.PNG)
+
+---
 
 >## *Task List*
 
