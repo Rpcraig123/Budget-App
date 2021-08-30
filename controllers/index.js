@@ -14,10 +14,10 @@ const getAllTransactions = async (req, res) => {
 
 const createExpense = async (req, res) => {
   try {
-    const shoe = await new Shoe(req.body)
-    await shoe.save()
+    const expense = await new Expense(req.body)
+    await expense.save()
     return res.status(201).json({
-      shoe
+      expense
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
@@ -26,50 +26,65 @@ const createExpense = async (req, res) => {
 
 const createPayment = async (req, res) => {
   try {
-    const shoe = await new Shoe(req.body)
-    await shoe.save()
+    const payment = await new Payment(req.body)
+    await payment.save()
     return res.status(201).json({
-      shoe
+      payment
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
 }
 
-const removeTransaction = async (req, res) => {
+const removeExpense = async (req, res) => {
   try {
-      const { id } = req.params;
-      const deleted = await Plant.findByIdAndDelete(id)
+      const id = req.params.Id;
+      const deleted = await Expense.findByIdAndDelete(id)
       if (deleted) {
-          return res.status(200).send("Plant deleted");
+          return res.status(200).send("Expense deleted");
       }
-      throw new Error("Plant not found");
+      throw new Error("Expense not found");
+      
   } catch (error) {
       return res.status(500).send(error.message);
   }
 }
 
-const updateTransaction = async (req, res) => {
+const removePayment = async (req, res) => {
   try {
-      const { id } = req.params;
-      await Plant.findByIdAndUpdate(id, req.body, { new: true }, (err, plant) => {
-          if (err) {
-              res.status(500).send(err);
-          }
-          if (!plant) {
-              res.status(500).send('Plant not found!');
-          }
-          return res.status(200).json(plant);
-      })
+      const id = req.params.Id;
+      const deleted = await Payment.findByIdAndDelete(id)
+      if (deleted) {
+          return res.status(200).send("Payment deleted");
+      }
+      throw new Error("Payment not found");
   } catch (error) {
       return res.status(500).send(error.message);
   }
 }
+
+// const updateTransaction = async (req, res) => {
+//   try {
+//       const { id } = req.params;
+//       await Plant.findByIdAndUpdate(id, req.body, { new: true }, (err, plant) => {
+//           if (err) {
+//               res.status(500).send(err);
+//           }
+//           if (!plant) {
+//               res.status(500).send('Plant not found!');
+//           }
+//           return res.status(200).json(plant);
+//       })
+//   } catch (error) {
+//       return res.status(500).send(error.message);
+//   }
+// }
 
 module.exports = {
   getAllTransactions,
   createExpense,
   createPayment,
-  removeTransaction,
-  updateTransaction
+  removeExpense,
+  removePayment
+  // updateTransaction
 }
