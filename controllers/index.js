@@ -2,9 +2,10 @@ const { Payment, Expense } = require('../models')
 
 const getAllTransactions = async (req, res) => {
   try {
-    const shoes = await Shoe.find()
+    const payments = await Payment.find()
+    const expenses = await Expense.find()
     return res.status(201).json({
-      shoes
+      payments, expenses
     })
   } catch (error) {
     return res.status(500).send(error.message)
