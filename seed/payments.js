@@ -10,13 +10,13 @@ const main = async () => {
       year: '2021',
       month: 'June',
       description: 'paycheck',
-      amount: 115
+      ammount: 115
     },
     {
       year: '2021',
       month: 'July',
       description: 'birthday money',
-      amount: 25
+      ammount: 25
     }
   ]
 
