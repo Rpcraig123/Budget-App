@@ -6,7 +6,6 @@ function ExpenseHistory(props) {
 
   const deletePost = async (e) => {
     e.preventDefault()
-    console.log(props.id)
     await axios.delete(`${BASE_URL}/remove-expense/${props.id}`)
     props.request ? props.changeIt(false) : props.changeIt(true)
   }
@@ -14,7 +13,7 @@ function ExpenseHistory(props) {
   return (
     <div className='exp_hist'>
       <p className="expense">
-        year: {props.year} Month: {props.month} Description: {props.description} Amount: ${props.amount}{' '} <button onClick={deletePost}>Delete</button>
+        year: {props.year} Month: {props.month} Description: {props.description} Amount: ${props.ammount}{' '} <button onClick={deletePost}>Delete</button>
       </p>
     </div>
   )

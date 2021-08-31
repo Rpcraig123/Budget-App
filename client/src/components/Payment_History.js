@@ -6,7 +6,6 @@ function PaymentHistory(props) {
 
   const deletePost = async (e) => {
     e.preventDefault()
-    console.log(props.id)
     await axios.delete(`${BASE_URL}/remove-payment/${props.id}`)
     props.request ? props.changeIt(false) : props.changeIt(true)
   }
