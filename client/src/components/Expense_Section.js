@@ -23,10 +23,13 @@ function ExpenseSection() {
       {posts.map((result) => (
             <ExpenseHistory
               key={result._id}
+              id={result._id}
               year={result.year}
               month={result.month}
               description={result.description}
               amount={result.amount}
+              request={request}
+              changeIt={changeIt}
             />
           ))}
     </div>
