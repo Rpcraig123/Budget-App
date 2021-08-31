@@ -10,7 +10,6 @@ function PaymentSection() {
 
   const getPosts = async () => {
     const res = await axios.get(`${BASE_URL}/`)
-    console.log(res.data.payments)
     setPosts(res.data.payments)
   }
 
@@ -20,8 +19,18 @@ function PaymentSection() {
 
   return (
     <div className='pay_sect'>
-      Payment Section
-      <PaymentHistory />
+      Payments
+      {posts.map((result) => (
+            <PaymentHistory
+              key={result._id}
+              year={result.year}
+              month={result.month}
+              description={result.description}
+              amount={result.amount}
+            />
+          )
+        )
+      }
     </div>
   )
 }

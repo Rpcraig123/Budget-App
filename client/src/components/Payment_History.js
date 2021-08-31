@@ -1,10 +1,11 @@
 import React from 'react'
 
-function PaymentHistory() {
+function PaymentHistory(props) {
   return (
     <div className='pay_hist'>
-      Payment History
-      
+      <p className="payment">
+        year: {props.year} Month: {props.month} Description: {props.description} Amount:{props.amount}{' '}
+      </p>
     </div>
   )
 }

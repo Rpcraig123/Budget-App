@@ -1,13 +1,12 @@
 import React from 'react'
 
-function ExpenseHistory() {
+function ExpenseHistory(props) {
 
   return (
     <div className='exp_hist'>
-      Expense History
-      {/* <p className="post-body">
-        Model: {props.model} Color: {props.color} Brand: {props.brand}{' '}
-      </p> */}
+      <p className="expense">
+        year: {props.year} Month: {props.month} Description: {props.description} Amount:{props.amount}{' '}
+      </p>
     </div>
   )
 }
