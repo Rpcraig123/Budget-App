@@ -3,22 +3,31 @@ import ExpenseHistory from "./Expense_History";
 import axios from 'axios'
 import { BASE_URL } from './globals'
 import Table from 'react-bootstrap/Table'
+import Debt from './Debt';
 
 function ExpenseSection() {
 
   const [posts, setPosts] = useState([])
   const [request, changeIt] = useState(false)
-  // const [totalExp, addExp] = useState(0)
-
-  // export let expenseTotal
+  const [debt, setDebt] = useState(0)
+  
 
   const getPosts = async () => {
     const res = await axios.get(`${BASE_URL}/`)
     setPosts(res.data.expenses)
     let expenses = res.data.expenses
+    let payments = res.data.payments
+    let totalDebt = 0
+    let paymentTotal = 0
+    let expenseTotal = 0
     for (let i = 0; i < expenses.length; i++) {
-      // expenseTotal += expenses[i].amount
+      expenseTotal += expenses[i].amount
     }
+    for (let i = 0; i < payments.length; i++) {
+      paymentTotal += payments[i].amount
+    }
+    totalDebt = paymentTotal - expenseTotal
+    setDebt(Math.abs(totalDebt.toFixed(2)))
   }
 
   useEffect(() => {
@@ -27,6 +36,9 @@ function ExpenseSection() {
 
   return (
     <div className='exp_sect'>
+      <Debt
+        totalDebt={debt}
+      />
       <h2>Expenses</h2>
       <Table striped bordered hover>
         <thead>
