@@ -14,7 +14,6 @@ function PaymentForm(props) {
   }
   const amountOnChange = (e) => {
     props.setAmount(e.target.value)
-    // props.setType('new-payment')
   }
 
   return (

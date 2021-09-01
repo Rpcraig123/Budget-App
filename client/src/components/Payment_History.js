@@ -12,11 +12,6 @@ function PaymentHistory(props) {
   }
 
   return (
-    // <div className='pay_hist'>
-    //   <p className="payment">
-    //     year: {props.year} Month: {props.month} Description: {props.description} Amount: ${props.amount}{' '} <button onClick={deletePost}>Delete</button>
-    //   </p>
-    // </div>
     <tr>
       <td>{props.year}</td>
       <td>{props.month}</td>
