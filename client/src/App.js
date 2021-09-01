@@ -47,6 +47,7 @@ function App(props) {
           setDesc={setDesc}
           setAmount={setAmount}
           transType={'new-expense'}
+          formType={'Expense'}
         />
       </Route>
       <Route path='/add-payment' exact>
@@ -57,6 +58,7 @@ function App(props) {
           setDesc={setDesc}
           setAmount={setAmount}
           transType={'new-payment'}
+          formType={'Payment'}
         />
       </Route>
     </Switch>
