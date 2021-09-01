@@ -1,25 +1,14 @@
-/* body {
-  background: #f9fef1;
+.mb-3, .btn-outline-primary, h3{
+  margin: 25px;
 }
 
-p {
-  text-align: left;
+.navbar-brand, h2 {
+  margin-left: 25px;
 }
 
-.home {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+.table {
+  margin-left: 25px;
 }
-
-.exp_sect {
-  grid-column-start: 1;
-  /* justify-items: center; */
-/* }
-
-.Title {
-  font-size: 40px;
-} */ 
 
 
 

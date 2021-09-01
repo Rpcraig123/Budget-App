@@ -37,7 +37,7 @@ function PaymentForm(props) {
           <Form.Label>Amount</Form.Label>
           <Form.Control type="text" placeholder="Enter Amount in USD" onChange={(e) => amountOnChange(e)}/>
         </Form.Group>
-        <Button type="submit" variant="outline-primary">Success</Button>
+        <Button type="submit" variant="outline-primary">Submit</Button>
       </Form>
     </div>
   )
