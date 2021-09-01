@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { BASE_URL } from './globals'
+import Button from 'react-bootstrap/Button'
 
 function ExpenseHistory(props) {
 
@@ -16,7 +17,7 @@ function ExpenseHistory(props) {
       <td>{props.month}</td>
       <td>{props.description}</td>
       <td>${props.amount}</td>
-      <td><button onClick={deletePost}>Delete</button></td>
+      <td><Button variant="danger" onClick={deletePost}>Delete</Button></td>
     </tr>
   )
 }
