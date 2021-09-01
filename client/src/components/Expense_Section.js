@@ -7,10 +7,17 @@ function ExpenseSection() {
 
   const [posts, setPosts] = useState([])
   const [request, changeIt] = useState(false)
+  // const [totalExp, addExp] = useState(0)
+
+  // export let expenseTotal
 
   const getPosts = async () => {
     const res = await axios.get(`${BASE_URL}/`)
     setPosts(res.data.expenses)
+    let expenses = res.data.expenses
+    for (let i = 0; i < expenses.length; i++) {
+      // expenseTotal += expenses[i].amount
+    }
   }
 
   useEffect(() => {
