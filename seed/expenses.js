@@ -10,37 +10,37 @@ const main = async () => {
       year: '2021',
       month: 'June',
       description: 'Bougt Shoes',
-      ammount: 115.15
+      amount: 115.15
     },
     {
       year: '2021',
       month: 'July',
       description: 'Groceries',
-      ammount: 38.75
+      amount: 38.75
     },
     {
       year: '2021',
       month: 'July',
       description: 'Gym Membership',
-      ammount: 30.00
+      amount: 30.00
     },
     {
       year: '2021',
       month: 'August',
       description: 'Boardgame',
-      ammount: 45.00
+      amount: 45.00
     },
     {
       year: '2021',
       month: 'August',
       description: 'McDonalds',
-      ammount: 10.81
+      amount: 10.81
     },
     {
       year: '2021',
       month: 'August',
       description: 'Gas',
-      ammount: 25.52
+      amount: 25.52
     }
   ]
 

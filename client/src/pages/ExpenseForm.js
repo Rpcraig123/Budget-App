@@ -9,8 +9,8 @@ function ExpenseForm(props) {
   const descOnChange = (e) => {
     props.setDesc(e.target.value)
   }
-  const ammountOnChange = (e) => {
-    props.setAmmount(e.target.value)
+  const amountOnChange = (e) => {
+    props.setAmount(e.target.value)
   }
 
   return (
@@ -37,9 +37,9 @@ function ExpenseForm(props) {
         />
         <input
           type="text"
-          name="Ammount($)"
-          placeholder="Ammount in USD"
-          onChange={(e) => ammountOnChange(e)}
+          name="Amount($)"
+          placeholder="Amount in USD"
+          onChange={(e) => amountOnChange(e)}
         />
         <button type="submit">Submit Post</button>
       </form>

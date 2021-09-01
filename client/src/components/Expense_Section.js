@@ -27,7 +27,7 @@ function ExpenseSection() {
               year={result.year}
               month={result.month}
               description={result.description}
-              ammount={result.ammount}
+              amount={result.amount}
               request={request}
               changeIt={changeIt}
             />

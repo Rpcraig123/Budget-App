@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter} from 'react-router-dom';
 import ExpenseForm from './pages/ExpenseForm';
 import Home from './pages/Home';
 import PaymentForm from './pages/PaymentForm';
@@ -7,17 +7,17 @@ import React, { useState } from 'react'
 import { BASE_URL } from './components/globals'
 import axios from 'axios'
 
-function App() {
+function App(props) {
 
   const [year, setYear] = useState('')
   const [month, setMonth] = useState('')
   const [desc, setDesc] = useState('')
-  const [ammount, setAmmount] = useState('')
+  const [amount, setAmount] = useState('')
   let newPost = {
     year: ``,
     month: ``,
     description: ``,
-    ammount: 0
+    amount: 0
   }
 
   const createNewPost = async (e) => {
@@ -26,11 +26,11 @@ function App() {
       year: `${year}`,
       month: `${month}`,
       description: `${desc}`,
-      ammount: `${ammount}`
+      amount: `${amount}`
     }
     const res = await axios.post(`${BASE_URL}/new-expense`, newPost)
+    props.history.push(`/`)
     return res
-    
   }
 
   return <div>
@@ -45,7 +45,7 @@ function App() {
           setYear={setYear}
           setMonth={setMonth}
           setDesc={setDesc}
-          setAmmount={setAmmount}
+          setAmount={setAmount}
         />
       </Route>
       <Route path='/add-payment' exact>
@@ -55,4 +55,4 @@ function App() {
   </div>
 }
 
-export default App;
+export default withRouter(App);

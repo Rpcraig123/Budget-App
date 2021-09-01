@@ -13,7 +13,7 @@ function ExpenseHistory(props) {
   return (
     <div className='exp_hist'>
       <p className="expense">
-        year: {props.year} Month: {props.month} Description: {props.description} Amount: ${props.ammount}{' '} <button onClick={deletePost}>Delete</button>
+        year: {props.year} Month: {props.month} Description: {props.description} Amount: ${props.amount}{' '} <button onClick={deletePost}>Delete</button>
       </p>
     </div>
   )
