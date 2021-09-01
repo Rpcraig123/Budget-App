@@ -1,3 +1,25 @@
+body {
+  background: #f9fef1;
+}
+
+p {
+  text-align: left;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.exp_sect {
+  grid-column-start: 1;
+  /* justify-items: center; */
+}
+
+.Title {
+  font-size: 40px;
+}
 
 
 
