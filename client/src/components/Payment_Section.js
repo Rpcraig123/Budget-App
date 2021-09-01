@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PaymentHistory from "./Payment_History";
 import axios from 'axios'
 import { BASE_URL } from './globals'
+import Table from 'react-bootstrap/Table'
 
 function PaymentSection() {
 
@@ -19,8 +20,18 @@ function PaymentSection() {
 
   return (
     <div className='pay_sect'>
-      Payments
-      {posts.map((result) => (
+      <h2>Payments</h2>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Month</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+        {posts.map((result) => (
             <PaymentHistory
               key={result._id}
               id={result._id}
@@ -31,9 +42,11 @@ function PaymentSection() {
               request={request}
               changeIt={changeIt}
             />
+            )
           )
-        )
-      }
+        }
+        </tbody>
+      </Table>
     </div>
   )
 }
