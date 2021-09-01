@@ -1,4 +1,4 @@
-function ExpenseForm(props) {
+function PaymentForm(props) {
 
   const yearOnChange = (e) => {
     props.setYear(e.target.value)
@@ -11,12 +11,13 @@ function ExpenseForm(props) {
   }
   const amountOnChange = (e) => {
     props.setAmount(e.target.value)
+    // props.setType('new-payment')
   }
 
   return (
-    <div className='add-ex'>
+    <div className='add-pay'>
       Expense Form
-      <form onSubmit={(e) => props.createNewPost(e)}>
+      <form onSubmit={(e) => props.createNewPost(e, props.transType)}>
         <input
           type="text"
           name="Year"
@@ -47,4 +48,4 @@ function ExpenseForm(props) {
   )
 }
 
-export default ExpenseForm;
+export default PaymentForm;

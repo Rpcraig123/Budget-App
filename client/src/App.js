@@ -1,7 +1,6 @@
 import { Route, Switch, withRouter} from 'react-router-dom';
-import ExpenseForm from './pages/ExpenseForm';
 import Home from './pages/Home';
-import PaymentForm from './pages/PaymentForm';
+import TransactionForm from './pages/TransactionForm';
 import MainNavigation from './components/layout/MainNavigation';
 import React, { useState } from 'react'
 import { BASE_URL } from './components/globals'
@@ -20,7 +19,7 @@ function App(props) {
     amount: 0
   }
 
-  const createNewPost = async (e) => {
+  const createNewPost = async (e, transType) => {
     e.preventDefault()
     newPost = {
       year: `${year}`,
@@ -28,7 +27,7 @@ function App(props) {
       description: `${desc}`,
       amount: `${amount}`
     }
-    const res = await axios.post(`${BASE_URL}/new-expense`, newPost)
+    const res = await axios.post(`${BASE_URL}/${transType}`, newPost)
     props.history.push(`/`)
     return res
   }
@@ -40,16 +39,24 @@ function App(props) {
         <Home />
       </Route>
       <Route path='/add-expense' exact>
-        <ExpenseForm
+        <TransactionForm
           createNewPost={createNewPost}
           setYear={setYear}
           setMonth={setMonth}
           setDesc={setDesc}
           setAmount={setAmount}
+          transType={'new-expense'}
         />
       </Route>
       <Route path='/add-payment' exact>
-        <PaymentForm />
+        <TransactionForm 
+          createNewPost={createNewPost}
+          setYear={setYear}
+          setMonth={setMonth}
+          setDesc={setDesc}
+          setAmount={setAmount}
+          transType={'new-payment'}
+        />
       </Route>
     </Switch>
   </div>
