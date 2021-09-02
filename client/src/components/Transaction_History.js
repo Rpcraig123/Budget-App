@@ -3,7 +3,7 @@ import axios from 'axios'
 import { BASE_URL } from './globals'
 import Button from 'react-bootstrap/Button'
 
-function ExpenseHistory(props) {
+function TransactionHistory(props) {
 
   const deletePost = async (e) => {
     e.preventDefault()
@@ -22,4 +22,4 @@ function ExpenseHistory(props) {
   )
 }
 
-export default ExpenseHistory;
+export default TransactionHistory;
