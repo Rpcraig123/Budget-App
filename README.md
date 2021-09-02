@@ -2,16 +2,19 @@
 ### Date Started: 08/30/21
 ### By: Ryan Craig
 
-[LinkedIn](https://www.linkedin.com/in/ryancraigeit/)
+[LinkedIn](https://www.linkedin.com/in/ryancraigeit/) | [Credit Card Expense Tracker](https://pacific-bayou-56761.herokuapp.com/)
 
-![UI](./images/UI_New.PNG)
+![UI](./images/Current_UI.PNG)
 
 ---
 
 >## *Description*
-This tracking app will be used to track expenses accumulated on a single credit card. The user will be able to add expenses and payments info while the app would calculate the total current amount of debt on the card in USD.
+The Credit Card Expense Tracker is a MERN app that can be used to track expenses, payments, and debt accumulated on a single credit card. Currently deployed on heroku, this app is a starter project that can later evolve into a full service budgeting tool.
 
 ---
+
+>## *Getting Started*
+Click on the link at the top of the ReadMe that says "Credit Card Expense Tracker". After you are redirected, you can play with the app's functionality by adding payments, expenses, and deleting transactions as needed.
 
 >## *Technologies Used* 
 * MongoDB
@@ -21,25 +24,9 @@ This tracking app will be used to track expenses accumulated on a single credit 
 
 ---
 
->## *Entity Relationship Diagram*
-The database will be composed of 2 collections. One for payments and one for expenses. The collections will not be connected by any relationship. 
+>## *Future Updates*
 
-![ERD](./images/ERD.PNG)
-
----
-
->## *Component Hierarchy Diagram*
-
-![Component Hierarchy Diagram](./images/Comp_Diagram.PNG)
-
----
-
->## *Task List*
-
-- [ ] Design frontend with React.
-- [ ] Build Mongoose Models for both payments and expenses.
-- [ ] Use react router to build links for the windows that the user will use to add payments and expenses.
-- [ ] Put together seed data for testing.
-- [ ] Build routes and controllers using Express. User will be able to GET all present expenses and payments, POST a new payment or expense, and DELETE a payment or expense.
-- [ ] Deploy the app using Heroku to test functionality.
-- [ ] Style application into a presentable portfolio piece and implement post MVP requirements.
+- [ ] Incorporate a button or contol that can allow a user to update a transaction.
+- [ ] Incorporate a budget related API to fetch articles and other helpful information that can help someone take control of their finances.
+- [ ] Allow the user to input data related to multiple credit cards, and a bank account.
+- [ ] Incorporate additional styling and improve upon the color scheme.
