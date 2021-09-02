@@ -7,7 +7,7 @@ function TransactionHistory(props) {
 
   const deletePost = async (e) => {
     e.preventDefault()
-    await axios.delete(`${BASE_URL}/remove-expense/${props.id}`)
+    await axios.delete(`${BASE_URL}/${props.del_path}/${props.id}`)
     props.request ? props.changeIt(false) : props.changeIt(true)
   }
 

@@ -45,38 +45,41 @@ function ExpenseSection() {
   return (
     <div>
       <div className="debt_sect">
-        <Debt
-          totalDebt={debt}
-        />
+        <Container>
+          <Debt
+            totalDebt={debt}
+          />
+        </Container>
       </div>
       <div className='exp_sect'>
         <Container>
-        <h2>Expenses</h2>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Year</th>
-              <th>Month</th>
-              <th>Description</th>
-              <th>Amount</th>
-              <th> </th>
-            </tr>
-          </thead>
-          <tbody>
-            {posts.map((result) => (
-                  <TransactionHistory
-                    key={result._id}
-                    id={result._id}
-                    year={result.year}
-                    month={result.month}
-                    description={result.description}
-                    amount={result.amount}
-                    request={request}
-                    changeIt={changeIt}
-                  />
-                ))}
-          </tbody>
-        </Table>
+          <h2>Expenses</h2>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th> </th>
+              </tr>
+            </thead>
+            <tbody>
+              {posts.map((result) => (
+                    <TransactionHistory
+                      key={result._id}
+                      id={result._id}
+                      year={result.year}
+                      month={result.month}
+                      description={result.description}
+                      amount={result.amount}
+                      request={request}
+                      changeIt={changeIt}
+                      del_path={'remove-expense'}
+                    />
+                  ))}
+            </tbody>
+          </Table>
         </Container>
       </div>
       <div className='exp_sect'>
@@ -103,6 +106,7 @@ function ExpenseSection() {
                     amount={result.amount}
                     request={request}
                     changeIt={changeIt}
+                    del_path={'remove-payment'}
                   />
                 ))}
           </tbody>
