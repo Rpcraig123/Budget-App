@@ -6,9 +6,17 @@
   margin-left: 25px;
 }
 
-/* .table {
-  margin-left: 25px;
-} */
+.debt_sect {
+  margin: 20px 0px;
+}
+
+.sect_head {
+  font-size: large;
+}
+
+th, td {
+  font-size: small;
+}
 
 
 

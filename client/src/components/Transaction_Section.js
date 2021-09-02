@@ -53,7 +53,7 @@ function ExpenseSection() {
       </div>
       <div className='exp_sect'>
         <Container>
-          <h2>Expenses</h2>
+          <h2 className="sect_head">Expenses</h2>
           <Table striped bordered hover>
             <thead>
               <tr>
@@ -84,7 +84,7 @@ function ExpenseSection() {
       </div>
       <div className='exp_sect'>
         <Container>
-        <h2>Payments</h2>
+        <h2 className="sect_head">Payments</h2>
         <Table striped bordered hover>
           <thead>
             <tr>
