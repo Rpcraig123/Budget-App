@@ -26,7 +26,12 @@ function ExpenseSection() {
     for (let i = 0; i < payments.length; i++) {
       paymentTotal += payments[i].amount
     }
-    totalDebt = paymentTotal - expenseTotal
+    if (expenseTotal > paymentTotal) {
+      totalDebt = expenseTotal - paymentTotal
+    }
+    else {
+      totalDebt = 0
+    }
     setDebt(Math.abs(totalDebt.toFixed(2)))
   }
 
