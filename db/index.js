@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-// require('dotenv').config()
+require('dotenv').config()
 
-let dbUrl = 'mongodb://127.0.0.1:27017/expenseDatabase'
-// let dbUrl = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URI : 'mongodb://127.0.0.1:27017/expenseDatabase'
+// let dbUrl = 'mongodb://127.0.0.1:27017/expenseDatabase'
+let dbUrl = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URI : 'mongodb://127.0.0.1:27017/expenseDatabase'
 
 mongoose
     .connect(dbUrl, { 
