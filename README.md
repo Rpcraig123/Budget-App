@@ -16,6 +16,8 @@ The Credit Card Expense Tracker is a MERN app that can be used to track expenses
 >## *Getting Started*
 Click on the link at the top of the ReadMe that says "Credit Card Expense Tracker". After you are redirected, you can play with the app's functionality by adding payments, expenses, and deleting transactions as needed.
 
+---
+
 >## *Technologies Used* 
 * MongoDB
 * Express.js
