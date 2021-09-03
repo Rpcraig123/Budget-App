@@ -43,7 +43,7 @@ function ExpenseSection() {
   }, [request])
 
   return (
-    <div>
+    <div className='grid'>
       <div className="debt_sect">
         <Container>
           <Debt
